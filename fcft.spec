@@ -1,3 +1,8 @@
+%define libname %mklibname %{name}_ %{major}
+%define devname %mklibname -d %{name}
+
+%define major 3
+
 Name:           fcft
 Version:        2.3.2
 Release:        1
@@ -25,12 +30,20 @@ on top of FontConfig, FreeType2 and pixman.
 It can load and cache fonts from a fontconfig-formatted name string,
 e.g. Monospace:size=12, optionally with user configured fallback fonts.
 
+%package -n %{libname}
+Summary:	Libraries for fcft
+Group:		System/Libraries
 
-%package        devel
+%description -n %{libname}
+This package provides the shared fcft library.
+
+
+%package -n %{devname}
 Summary:        Development files for %{name}
-Requires:       %{name}%{?_isa} = %{version}-%{release}
+Requires:	%{libname} = %{version}-%{release}
+Provides:	%{name}-devel = %{version}-%{release}
 
-%description    devel
+%description -n %{devname}
 The %{name}-devel package contains libraries and header files for
 developing applications that use %{name}.
 
@@ -39,11 +52,9 @@ developing applications that use %{name}.
 %autosetup -n %{name}
 cp unicode/LICENSE LICENSE.Unicode
 
-
 %build
 %meson
 %meson_build
-
 
 %install
 %meson_install
@@ -53,10 +64,12 @@ rm -f %{buildroot}%{_docdir}/%{name}/LICENSE
 
 %files
 %license LICENSE LICENSE.Unicode
-%{_libdir}/lib%{name}.so.3*
 %dir %{_docdir}/%{name}
 %{_docdir}/%{name}/CHANGELOG.md
 %{_docdir}/%{name}/README.md
+
+%files -n %{libname}
+%{_libdir}/lib%{name}.so.%{major}*
 
 %files devel
 %{_includedir}/%{name}/
