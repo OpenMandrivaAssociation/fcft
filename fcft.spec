@@ -71,7 +71,7 @@ rm -f %{buildroot}%{_docdir}/%{name}/LICENSE
 %files -n %{libname}
 %{_libdir}/lib%{name}.so.%{major}*
 
-%files devel
+%files -n %{devname}
 %{_includedir}/%{name}/
 %{_libdir}/lib%{name}.so
 %{_libdir}/pkgconfig/%{name}.pc
