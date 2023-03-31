@@ -5,7 +5,7 @@
 
 Name:           fcft
 Version:        2.4.0
-Release:        1
+Release:        2
 Summary:        Simple library for font loading and glyph rasterization
 
 License:        MIT and Unicode
