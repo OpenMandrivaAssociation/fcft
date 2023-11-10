@@ -4,8 +4,8 @@
 %define major 3
 
 Name:           fcft
-Version:        2.4.0
-Release:        2
+Version:        3.1.6
+Release:        1
 Summary:        Simple library for font loading and glyph rasterization
 
 License:        MIT and Unicode
