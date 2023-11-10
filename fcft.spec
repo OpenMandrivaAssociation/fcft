@@ -20,6 +20,7 @@ BuildRequires:  pkgconfig(freetype2)
 BuildRequires:  pkgconfig(harfbuzz)
 BuildRequires:  pkgconfig(pixman-1)
 BuildRequires:  pkgconfig(scdoc)
+BuildRequires:  pkgconfig(libutf8proc)
 BuildRequires:  pkgconfig(tllist)
 # require *-static for header-only library
 BuildRequires:  tllist-static
