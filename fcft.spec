@@ -1,7 +1,7 @@
 %define libname %mklibname %{name}_ %{major}
 %define devname %mklibname -d %{name}
 
-%define major 3
+%define major 4
 
 Name:           fcft
 Version:        3.1.6
