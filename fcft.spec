@@ -4,7 +4,7 @@
 %define major 4
 
 Name:           fcft
-Version:        3.1.6
+Version:        3.1.7
 Release:        1
 Summary:        Simple library for font loading and glyph rasterization
 
@@ -50,7 +50,7 @@ developing applications that use %{name}.
 
 
 %prep
-%autosetup -n %{name}
+%autosetup -n %{name} -p1
 cp unicode/LICENSE LICENSE.Unicode
 
 %build
