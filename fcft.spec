@@ -51,7 +51,6 @@ developing applications that use %{name}.
 
 %prep
 %autosetup -n %{name} -p1
-#cp unicode/LICENSE LICENSE.Unicode
 
 %build
 %meson
@@ -64,7 +63,7 @@ rm -f %{buildroot}%{_docdir}/%{name}/LICENSE
 
 
 %files
-%license LICENSE LICENSE.Unicode
+%license LICENSE
 %dir %{_docdir}/%{name}
 %{_docdir}/%{name}/CHANGELOG.md
 %{_docdir}/%{name}/README.md
