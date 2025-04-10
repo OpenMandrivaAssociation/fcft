@@ -51,7 +51,7 @@ developing applications that use %{name}.
 
 %prep
 %autosetup -n %{name} -p1
-cp unicode/LICENSE LICENSE.Unicode
+#cp unicode/LICENSE LICENSE.Unicode
 
 %build
 %meson
